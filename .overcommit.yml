@@ -22,6 +22,7 @@ PreCommit:
   ExecutePermissions:
     enabled: true
     exclude:
+      - 'bin/jekyll'
       - 'bin/overcommit'
       - 'bin/rubocop'
 
