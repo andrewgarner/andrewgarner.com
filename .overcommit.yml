@@ -23,9 +23,15 @@ PreCommit:
     enabled: true
     exclude:
       - 'bin/overcommit'
+      - 'bin/rubocop'
 
   HardTabs:
+      enabled: true
+
+  RuboCop:
     enabled: true
+    on_warn: fail # Treat all warnings as failures
+    required_executable: 'bin/rubocop'
 
   TrailingWhitespace:
     enabled: true
