@@ -33,6 +33,7 @@ GEM
       ast (~> 2.2)
     powerpack (0.1.1)
     rainbow (2.1.0)
+    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -46,6 +47,9 @@ GEM
     ruby-progressbar (1.8.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
+    scss_lint (0.48.0)
+      rake (>= 0.9, < 12)
+      sass (~> 3.4.15)
     unicode-display_width (1.0.5)
 
 PLATFORMS
@@ -55,6 +59,7 @@ DEPENDENCIES
   jekyll
   overcommit
   rubocop
+  scss_lint
 
 BUNDLED WITH
    1.12.3

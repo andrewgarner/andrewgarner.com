@@ -25,6 +25,7 @@ PreCommit:
       - 'bin/jekyll'
       - 'bin/overcommit'
       - 'bin/rubocop'
+      - 'bin/scss-lint'
 
   HardTabs:
       enabled: true
@@ -33,6 +34,12 @@ PreCommit:
     enabled: true
     on_warn: fail # Treat all warnings as failures
     required_executable: 'bin/rubocop'
+
+  ScssLint:
+    enabled: true
+    include: '**/*.scss'
+    on_warn: fail # Treat all warnings as failures
+    required_executable: 'bin/scss-lint'
 
   TrailingWhitespace:
     enabled: true
