@@ -37,6 +37,10 @@ PreCommit:
 
   ScssLint:
     enabled: true
+    exclude:
+      - '_sass/_base.scss'
+      - '_sass/_layout.scss'
+      - '_sass/_syntax-highlighting.scss'
     include: '**/*.scss'
     on_warn: fail # Treat all warnings as failures
     required_executable: 'bin/scss-lint'
