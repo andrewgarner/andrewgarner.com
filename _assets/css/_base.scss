@@ -78,6 +78,7 @@ h3 {
 a {
     color: $brand-color;
     text-decoration: underline;
+    text-decoration-color: lighten($brand-color, 50%);
 
     &:visited {
         color: darken($brand-color, 15%);
@@ -85,6 +86,7 @@ a {
 
     &:hover {
         color: $text-color;
+        text-decoration-color: $brand-color;
     }
 }
 
