@@ -1,1 +1,2 @@
+preprocess_command: "sed '1,2s/---//'"
 scss_files: 'css/**/*.scss'
