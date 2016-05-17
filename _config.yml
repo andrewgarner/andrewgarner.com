@@ -13,4 +13,9 @@ description: >
 url: "https://www.andrewgarner.com" # the base hostname & protocol for your site
 
 # Build settings
+exclude:
+  - bin
+  - Gemfile*
+  - LICENSE
+  - README.md
 markdown: kramdown
