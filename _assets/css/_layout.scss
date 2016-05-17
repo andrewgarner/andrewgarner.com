@@ -27,3 +27,14 @@
 .page-heading {
     font-size: 20px;
 }
+
+
+/**
+ * Skills content
+ */
+.skills {
+    @include media-query($on-laptop) {
+        column-count: 2;
+        column-gap: $spacing-unit * 2;
+    }
+}
