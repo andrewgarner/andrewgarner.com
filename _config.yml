@@ -18,6 +18,7 @@ assets:
     css: true
   digest: true
 gems:
+  - autoprefixer-rails
   - jekyll-assets
   - jekyll-tidy
 exclude:

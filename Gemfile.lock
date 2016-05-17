@@ -3,6 +3,8 @@ GEM
   specs:
     addressable (2.4.0)
     ast (2.2.0)
+    autoprefixer-rails (6.3.6)
+      execjs
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     colorator (0.1)
@@ -84,6 +86,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   jekyll
   jekyll-assets
   jekyll-tidy
