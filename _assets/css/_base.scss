@@ -77,7 +77,7 @@ h3 {
  */
 a {
     color: $brand-color;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:visited {
         color: darken($brand-color, 15%);
