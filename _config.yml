@@ -13,6 +13,8 @@ description: >
 url: "https://www.andrewgarner.com" # the base hostname & protocol for your site
 
 # Build settings
+gems:
+  - jekyll-tidy
 exclude:
   - bin
   - Gemfile*

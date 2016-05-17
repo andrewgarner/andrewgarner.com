@@ -6,6 +6,8 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     colorator (0.1)
     ffi (1.9.10)
+    htmlbeautifier (1.1.1)
+    htmlcompressor (0.3.0)
     iniparse (1.4.2)
     jekyll (3.1.3)
       colorator (~> 0.1)
@@ -18,6 +20,10 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
+    jekyll-tidy (0.0.1)
+      htmlbeautifier
+      htmlcompressor
+      jekyll
     jekyll-watch (1.4.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.11.1)
@@ -57,6 +63,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-tidy
   overcommit
   rubocop
   scss_lint
