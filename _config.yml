@@ -16,6 +16,7 @@ url: "https://www.andrewgarner.com" # the base hostname & protocol for your site
 assets:
   compress:
     css: true
+  digest: true
 gems:
   - jekyll-assets
   - jekyll-tidy
