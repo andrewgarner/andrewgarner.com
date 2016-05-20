@@ -50,3 +50,12 @@
 .period-of-engagement {
     font-size: $small-font-size;
 }
+
+/**
+ * GitHub links
+ */
+.github-link {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
