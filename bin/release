@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# Tag and push a release.
+
+set -e
+
+# Make sure we’re on the master branch.
+
+(git branch | grep -q '* master') || {
+  echo "Only release from the master branch."
+  exit 1
+}
+
+# Make sure we’re in the project root.
+
+cd $(dirname "$0")/..
+
+# Build the site.
+
+jekyll build
+
+# Deploy it.
+
+s3_website push

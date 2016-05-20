@@ -24,6 +24,7 @@ PreCommit:
     exclude:
       - 'bin/jekyll'
       - 'bin/overcommit'
+      - 'bin/release'
       - 'bin/rubocop'
       - 'bin/s3_website'
       - 'bin/scss-lint'
