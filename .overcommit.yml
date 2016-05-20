@@ -25,6 +25,7 @@ PreCommit:
       - 'bin/jekyll'
       - 'bin/overcommit'
       - 'bin/rubocop'
+      - 'bin/s3_website'
       - 'bin/scss-lint'
 
   HardTabs:
