@@ -5,8 +5,6 @@ s3_bucket: www.andrewgarner.com
 index_document: index.html
 error_document: error.html
 
-ignore_on_server: cv.pdf
-
 cache_control:
   "assets/*": public, max-age=31536000 # 1 year
   "*": public, max-age=3600 # 1 hour
