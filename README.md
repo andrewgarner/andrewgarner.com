@@ -33,6 +33,12 @@ To serve the site locally:
 $ ./bin/jekyll serve
 ```
 
+To release the site:
+
+```sh
+$ env S3_ID='abc123' S3_SECRET='abc123' ./bin/release
+```
+
 
 [Andrew Garner]: https://www.andrewgarner.com
 [Bundler]: http://bundler.io
