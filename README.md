@@ -2,6 +2,7 @@
 
 Static site for [Andrew Garner] using [Jekyll].
 
+[![Dependency Status](https://dependencyci.com/github/andrewgarner/andrewgarner.com/badge?style=flat-square)](https://dependencyci.com/github/andrewgarner/andrewgarner.com)
 
 ## Prerequisites
 
