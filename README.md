@@ -6,8 +6,7 @@ Static site for [Andrew Garner] using [Jekyll].
 ## Prerequisites
 
 * [Git]
-* [Ruby]
-* [Bundler]
+* [Docker]
 
 
 ## Installation
@@ -18,19 +17,13 @@ Clone the repository:
 $ git clone git@github.com:andrewgarner/andrewgarner.com.git
 ```
 
-Install the required gems:
-
-```sh
-$ bundle install
-```
-
 
 ## Usage
 
-To serve the site locally:
+To serve the site locally using [Docker]:
 
 ```sh
-$ ./bin/jekyll serve
+$ docker-compose run jekyll
 ```
 
 To release the site:
@@ -41,7 +34,6 @@ $ env S3_ID='abc123' S3_SECRET='abc123' ./bin/release
 
 
 [Andrew Garner]: https://www.andrewgarner.com
-[Bundler]: http://bundler.io
+[Docker]: https://www.docker.com
 [Git]: http://git-scm.com
 [Jekyll]: https://jekyllrb.com
-[Ruby]: https://www.ruby-lang.org

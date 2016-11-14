@@ -23,7 +23,10 @@ gems:
   - jekyll-tidy
 exclude:
   - bin
+  - docker-compose.yml
+  - Dockerfile
   - Gemfile*
   - LICENSE
   - README.md
+  - s3_website.yml
 markdown: kramdown

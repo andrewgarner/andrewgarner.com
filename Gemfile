@@ -10,8 +10,6 @@ group :jekyll_plugins do
 end
 
 group :development do
-  gem 'overcommit'
   gem 'rubocop'
-  gem 's3_website'
   gem 'scss_lint', require: false
 end
