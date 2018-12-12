@@ -17,7 +17,7 @@ assets:
   compress:
     css: true
   digest: true
-gems:
+plugin:
   - autoprefixer-rails
   - jekyll-assets
   - jekyll-tidy
