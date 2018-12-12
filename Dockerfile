@@ -3,7 +3,7 @@ MAINTAINER Andrew Garner <andrew@andrewgarner.com>
 
 RUN \
   apt-get update && \
-  apt-get install -y openjdk-7-jre-headless && \
+  apt-get install -y openjdk-8-jre-headless && \
   
   yes | gem update --no-document -- --use-system-libraries && \
   yes | gem update --system --no-document -- --use-system-libraries && \
