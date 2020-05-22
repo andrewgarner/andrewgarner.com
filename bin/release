@@ -15,7 +15,7 @@ cd $(dirname "$0")/..
 
 # Build the site.
 
-docker-compose run jekyll jekyll build
+docker-compose run jekyll build
 
 # Deploy it.
 

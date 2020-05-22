@@ -23,7 +23,7 @@ $ git clone git@github.com:andrewgarner/andrewgarner.com.git
 To serve the site locally using [Docker]:
 
 ```sh
-$ docker-compose run jekyll
+$ docker-compose up jekyll
 ```
 
 To release the site:
