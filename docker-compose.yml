@@ -2,10 +2,7 @@ version: '3'
 
 services:
   jekyll:
-    environment:
-      - FORCE_BUNDLER
-      - FORCE_CACHE
-    image: 'jekyll/jekyll:builder'
+    image: jekyll/jekyll:3.8
     ports:
       - '4000:4000'
     volumes:
