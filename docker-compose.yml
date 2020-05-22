@@ -8,11 +8,13 @@ services:
       - '4000:4000'
     volumes:
       - ./:/srv/jekyll:cached
-      - bundle:/usr/local/bundle
+      - jekyll_bundle:/usr/local/bundle
   s3_website:
     build: .
     volumes:
       - ./_site:/srv/s3_website/_site
+      - s3_website_bundle:/usr/local/bundle
 
 volumes:
-  bundle:
+  jekyll_bundle:
+  s3_website_bundle:
