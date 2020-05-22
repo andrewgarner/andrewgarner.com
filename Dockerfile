@@ -1,5 +1,4 @@
 FROM ruby:latest
-MAINTAINER Andrew Garner <andrew@andrewgarner.com>
 
 RUN \
   apt-get update && \
