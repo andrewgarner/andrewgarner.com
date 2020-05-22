@@ -29,4 +29,5 @@ exclude:
   - LICENSE
   - README.md
   - s3_website.yml
+  - vendor
 markdown: kramdown
