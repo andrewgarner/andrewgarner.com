@@ -9,7 +9,7 @@ services:
     ports:
       - '4000:4000'
     volumes:
-      - ./:/srv/jekyll
+      - ./:/srv/jekyll:cached
   s3_website:
     build: .
     volumes:
