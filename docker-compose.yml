@@ -11,6 +11,8 @@ services:
       - jekyll_bundle:/usr/local/bundle
   s3_website:
     build: .
+    env_file:
+      - s3_website.env
     volumes:
       - ./_site:/srv/s3_website/_site
       - s3_website_bundle:/usr/local/bundle

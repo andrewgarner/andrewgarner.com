@@ -1,5 +1,5 @@
 _site
 .asset-cache
-.env
+.s3_website
 .sass-cache
 .jekyll-metadata

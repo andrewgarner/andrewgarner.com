@@ -1,22 +1,6 @@
 #!/usr/bin/env sh
 
-# Tag and push a release.
-
 set -e
-
-set -a
-[ -f .env ] && . .env
-set +a
-
-if [ -z "$S3_ID" ]; then
-    echo "Need to set S3_ID"
-    exit 1
-fi
-
-if [ -z "$S3_SECRET" ]; then
-    echo "Need to set S3_SECRET"
-    exit 1
-fi
 
 # Make sure we’re on the master branch.
 
@@ -35,4 +19,4 @@ docker-compose run jekyll jekyll build
 
 # Deploy it.
 
-docker-compose run -e S3_ID=$S3_ID -e S3_SECRET=$S3_SECRET s3_website
+docker-compose run s3_website push

@@ -28,6 +28,7 @@ exclude:
   - Gemfile*
   - LICENSE
   - README.md
+  - s3_website.env
   - s3_website.yml
   - vendor
 markdown: kramdown

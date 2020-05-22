@@ -1,16 +1,19 @@
-FROM ruby:latest
+FROM ruby:alpine
 
-RUN \
-  apt-get update && \
-  apt-get install -y openjdk-11-jre-headless && \
-  yes | gem update --no-document -- --use-system-libraries && \
-  yes | gem update --system --no-document -- --use-system-libraries && \
-  gem install s3_website && \
-  s3_website install
+RUN apk --no-cache add \
+  openjdk8 \
+  && rm -rf /var/cache/apk/*
 
-RUN mkdir -p /srv/s3_website
 WORKDIR /srv/s3_website
 
-ADD s3_website.yml /srv/s3_website/
+COPY s3_website.yml ./
 
-CMD ["s3_website", "push"]
+RUN gem install s3_website \
+  && rm -rf $GEM_HOME/cache/*.gem \
+  && mkdir -p $GEM_HOME/gems \
+  && find $GEM_HOME/gems -name "*.c" -delete \
+  && find $GEM_HOME/gems -name "*.o" -delete
+
+RUN s3_website install
+
+ENTRYPOINT ["s3_website"]
