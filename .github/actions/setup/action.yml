@@ -1,0 +1,20 @@
+name: Set up
+description: Set up the Node.js environment and install the project with a clean slate
+
+branding:
+  color: gray-dark
+  icon: terminal
+
+runs:
+  using: composite
+  steps:
+    - run: corepack enable
+      shell: bash
+
+    - uses: actions/setup-node@v4
+      with:
+        cache: pnpm
+        node-version-file: package.json
+
+    - run: pnpm install
+      shell: bash

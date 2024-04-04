@@ -9,6 +9,9 @@
   "devDependencies": {
     "@astrojs/check": "^0.5.10",
     "astro": "^4.8.6",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-packagejson": "^2.5.0",
     "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b"
