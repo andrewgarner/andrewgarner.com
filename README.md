@@ -1,39 +1,10 @@
 # andrewgarner.com
 
-Static site for [Andrew Garner] using [Jekyll].
+Static site for [Andrew Garner] using [Astro].
 
+## Getting started
 
-## Prerequisites
-
-* [Git]
-* [Docker]
-
-
-## Installation
-
-Clone the repository:
-
-```sh
-$ git clone git@github.com:andrewgarner/andrewgarner.com.git
-```
-
-
-## Usage
-
-To serve the site locally using [Docker]:
-
-```sh
-$ docker-compose up jekyll
-```
-
-To release the site:
-
-```sh
-$ env S3_ID='abc123' S3_SECRET='abc123' ./bin/release
-```
-
+This project uses [pnpm](https://pnpm.io/). Run `corepack enable` to install the required binaries.
 
 [Andrew Garner]: https://www.andrewgarner.com
-[Docker]: https://www.docker.com
-[Git]: http://git-scm.com
-[Jekyll]: https://jekyllrb.com
+[Astro]: https://astro.build/
