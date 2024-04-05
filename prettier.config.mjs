@@ -1,6 +1,6 @@
 /** @type {import('prettier').Config} */
 const config = {
-  plugins: ["prettier-plugin-packagejson"],
+  plugins: ["prettier-plugin-astro", "prettier-plugin-packagejson"],
 };
 
 export default config;

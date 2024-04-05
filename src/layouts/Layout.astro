@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,44 +8,204 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Andrew Garner is a technical practitioner based in London." />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>{title}</title>
+    <link rel="canonical" href="https://www.andrewgarner.com/" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <h1>Andrew Garner</h1>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <slot />
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p class="copyright">Copyright © Andrew Garner.</p>
+      </div>
+    </footer>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+
+<style is:global lang="scss">
+  @use "../styles/mixins" as *;
+  @use "../styles/variables" as *;
+
+  @import url(https://fonts.googleapis.com/css2?family=Anonymous+Pro);
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  hr,
+  dl,
+  dd,
+  ol,
+  ul,
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  ul,
+  ol,
+  dl,
+  figure,
+  %vertical-rhythm {
+    margin-bottom: calc($spacing-unit / 2);
+  }
+
+  ul,
+  ol {
+    margin-left: $spacing-unit;
+  }
+
+  li {
+    > ul,
+    > ol {
+      margin-bottom: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $base-font-weight;
+  }
+
+  h1,
+  h2 {
+    margin-top: $spacing-unit * 2;
+  }
+
+  h3 {
+    margin-top: $spacing-unit;
+  }
+
+  a {
+    color: $brand-color;
+    text-decoration: underline;
+    text-decoration-color: lighten($brand-color, 50%);
+
+    &:visited {
+      color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+      color: $text-color;
+      text-decoration-color: $brand-color;
+    }
+  }
+
+  blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: calc($spacing-unit / 2);
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  pre,
+  code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+  }
+
+  code {
+    padding: 1px 5px;
+  }
+
+  pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+      border: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  %clearfix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .wrapper {
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+      max-width: calc(#{$content-width} - (#{$spacing-unit}));
+      padding-right: calc($spacing-unit / 2);
+      padding-left: calc($spacing-unit / 2);
+    }
+  }
+
+  .site-header {
+    margin-top: calc($spacing-unit * 2);
+  }
+
+  .site-footer {
+    padding: $spacing-unit 0;
+  }
+
+  .page-content {
+    padding: $spacing-unit 0;
+  }
+
+  .copyright {
+    font-size: $small-font-size;
+  }
 </style>

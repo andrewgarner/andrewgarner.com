@@ -1,0 +1,12 @@
+---
+import { DateTime } from "luxon";
+
+interface Props {
+  isoString: string;
+}
+
+const { isoString }: Props = Astro.props;
+const value = DateTime.fromISO(isoString);
+---
+
+<time datetime={value.toFormat("yyyy-dd")}>{value.toFormat("LLLL yyyy")}</time>

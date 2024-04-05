@@ -1,0 +1,53 @@
+---
+import Time from "./Time.astro";
+
+interface Props {
+  id: string;
+  title: string;
+  period?: {
+    start: string;
+    end?: string;
+  };
+  github?: string;
+}
+
+const { id, title, period, github } = Astro.props;
+---
+
+<h3 id={id}>{title}</h3>
+
+{
+  period && (
+    <p class="period">
+      <Time isoString={period.start} />
+      to
+      {period.end ? <Time isoString={period.end} /> : "Present"}
+    </p>
+  )
+}
+
+<slot />
+
+{
+  github && (
+    <p>
+      <a href={`https://github.com/${github}`} class="github-link">
+        github.com/{github}
+      </a>
+    </p>
+  )
+}
+
+<style is:global lang="scss">
+  @use "../styles/variables" as *;
+
+  .github-link {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .period {
+    font-size: $small-font-size;
+  }
+</style>
