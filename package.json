@@ -7,9 +7,9 @@
     "start": "astro dev"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.5.10",
+    "@astrojs/check": "^0.7.0",
     "@types/luxon": "^3.4.2",
-    "astro": "^4.8.6",
+    "astro": "^4.11.1",
     "luxon": "^3.4.4",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
