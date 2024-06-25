@@ -1,7 +1,9 @@
 ---
 import Experience from "../components/Experience.astro";
 import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
 import Section from "../components/Section.astro";
+import Skill from "../components/Skill.astro";
 ---
 
 <Layout title="Andrew Garner">
@@ -27,7 +29,7 @@ import Section from "../components/Section.astro";
     </Section>
 
     <Section id="skills" title="Skills">
-      <Experience id="industry-knowledge" title="Industry knowledge">
+      <Skill id="industry-knowledge" title="Industry knowledge">
         <ul class="skills">
           <li>Agile methods</li>
           <li>Continuous delivery</li>
@@ -38,9 +40,9 @@ import Section from "../components/Section.astro";
           <li>Test&#8209;driven development</li>
           <li>User research</li>
         </ul>
-      </Experience>
+      </Skill>
 
-      <Experience id="tools-and-technologies" title="Tools & technologies">
+      <Skill id="tools-and-technologies" title="Tools & technologies">
         <ul class="skills">
           <li><a href="https://www.ruby-lang.org">Ruby</a></li>
           <li><a href="https://nodejs.org">Node.js</a></li>
@@ -61,18 +63,11 @@ import Section from "../components/Section.astro";
           <li><a href="https://www.rabbitmq.com">RabbitMQ</a></li>
           <li><a href="https://redis.io">Redis</a></li>
         </ul>
-      </Experience>
+      </Skill>
     </Section>
 
     <Section id="projects" title="Projects">
-      <Experience
-        id="hsbc-kinetic"
-        title="HSBC Kinetic"
-        period={{
-          start: "2019-01",
-          end: "2020-01",
-        }}
-      >
+      <Project id="hsbc-kinetic" title="HSBC Kinetic" period={{ start: "2019-01", end: "2020-01" }}>
         <p>
           As a Solutions Architect, I played a pivotal role in delivering the onboarding capability for HSBC’s new
           mobile&#8209;first business banking service, <a href="https://www.hsbckinetic.co.uk">Kinetic</a>, built on
@@ -115,23 +110,15 @@ import Section from "../components/Section.astro";
             services
           </li>
         </ul>
-      </Experience>
+      </Project>
 
-      <Experience
-        id="gov-uk"
-        title="GOV.UK"
-        period={{
-          start: "2016-06",
-          end: "2019-01",
-        }}
-      >
+      <Project id="gov-uk" title="GOV.UK" period={{ start: "2016-06", end: "2019-01" }}>
         <p>
           As a Senior Software Engineer, I contributed to several key projects for the <a
             href="https://www.gov.uk/government/organisations/government-digital-service"
             >Government&nbsp;Digital&nbsp;Service</a
           >, including:
         </p>
-
         <ul>
           <li>
             Migrated the core publishing platform to a new
@@ -147,15 +134,12 @@ import Section from "../components/Section.astro";
             Redesigned <a href="https://data.gov.uk">data.gov.uk</a>, an open data platform
           </li>
         </ul>
-      </Experience>
+      </Project>
 
-      <Experience
+      <Project
         id="pension-wise"
         title="Pension Wise"
-        period={{
-          start: "2014-09",
-          end: "2016-04",
-        }}
+        period={{ start: "2014-09", end: "2016-04" }}
         github="guidance-guarantee-programme"
       >
         <p>
@@ -186,18 +170,16 @@ import Section from "../components/Section.astro";
           <li>Configuring monitoring systems and operational dashboards</li>
           <li>
             Integrating with <a href="https://www.twilio.com">Twilio</a> and <a href="https://www.zendesk.com"
-              >Zendesk</a>
+              >Zendesk</a
+            >
           </li>
         </ul>
-      </Experience>
+      </Project>
 
-      <Experience
+      <Project
         id="money-advice-service"
         title="Money Advice Service"
-        period={{
-          start: "2013-12",
-          end: "2014-08",
-        }}
+        period={{ start: "2013-12", end: "2014-08" }}
         github="moneyadviceservice/frontend"
       >
         <p>
@@ -208,9 +190,9 @@ import Section from "../components/Section.astro";
           <li>Adopting a hexagonal architecture in Ruby on Rails</li>
           <li>Creating a design system</li>
         </ul>
-      </Experience>
+      </Project>
 
-      <Experience id="white-label-dating" title="White Label Dating">
+      <Project id="white-label-dating" title="White Label Dating">
         <p>
           I worked on a number of projects to support the rapid growth of the White Label Dating platform. This
           included:
@@ -237,29 +219,38 @@ import Section from "../components/Section.astro";
             microservices. Peak volumes were in excess of 20M emails per day.
           </li>
         </ul>
-      </Experience>
+      </Project>
     </Section>
 
     <Section id="experience" title="Experience">
       <Experience
-        id="cazoo-staff-software-engineer"
-        title="Staff Software Engineer at Cazoo"
-        period={{ start: "2023-01" }}
-      />
+        id="cazoo"
+        company="Cazoo"
+        roles={[
+          { position: "Staff Software Engineer", period: { start: "2023-01", end: "2024-05" } },
+          { position: "Senior Software Engineer", period: { start: "2021-06", end: "2022-12" } },
+          { position: "Software Engineer", period: { start: "2020-09", end: "2021-05" } },
+        ]}
+      >
+        <p>
+          <a href="https://www.cazoo.co.uk">Cazoo</a> was founded in December&nbsp;2018 with a mission to transform the car
+          buying experience across the UK and Europe by offering better selection, quality, transparency, convenience, flexibility,
+          and peace of mind.
+        </p>
+        <p>
+          They launched in December&nbsp;2019, became a unicorn in October 2020, and listed on the <abbr
+            title="New York Stock Exchange">NYSE</abbr
+          > in August&nbsp;2021. They developed a market&#8209;leading brand and fully integrated platform with in&#8209;house
+          purchasing, vehicle reconditioning and logistics. Despite selling ~170K vehicles, Cazoo entered administration
+          in May&nbsp;2024 due to financial challenges.
+        </p>
+      </Experience>
 
       <Experience
-        id="cazoo-senior-software-engineer"
-        title="Senior Software Engineer at Cazoo"
-        period={{ start: "2021-06", end: "2022-12" }}
-      />
-
-      <Experience
-        id="cazoo-software-engineer"
-        title="Software Engineer at Cazoo"
-        period={{ start: "2020-09", end: "2021-05" }}
-      />
-
-      <Experience id="surefire" title="Founder and Principal Consultant at SureFire" period={{ start: "2012-10" }}>
+        id="surefire"
+        company="SureFire"
+        roles={[{ position: "Founder and Principal Consultant", period: { start: "2012-10" } }]}
+      >
         <p>
           <a href="https://www.surefirething.co.uk">SureFire</a> helps make digital products and services. I have worked
           with clients including <a href="https://www.hsbc.co.uk">HSBC</a>, <a
@@ -273,8 +264,13 @@ import Section from "../components/Section.astro";
 
       <Experience
         id="venntro"
-        title="Senior Software Engineer at Venntro"
-        period={{ start: "2009-12", end: "2012-09" }}
+        company="Senior Software Engineer at Venntro"
+        roles={[
+          {
+            position: "Senior Software Engineer",
+            period: { start: "2009-12", end: "2012-09" },
+          },
+        ]}
       >
         <p>
           <a href="http://www.venntro.com">Venntro</a> is a <a href="http://www.fast50.co.uk">Deloitte Fast 50</a>
@@ -284,7 +280,16 @@ import Section from "../components/Section.astro";
         </p>
       </Experience>
 
-      <Experience id="idea" title="Software Engineer at iDEA" period={{ start: "2008-02", end: "2009-11" }}>
+      <Experience
+        id="idea"
+        company="iDEA"
+        roles={[
+          {
+            position: "Software Engineer",
+            period: { start: "2008-02", end: "2009-11" },
+          },
+        ]}
+      >
         <p>
           <a href="https://idea.eu">iDEA</a> are workplace design specialists. I created web apps for clients including the
           <a href="http://www.bbc.co.uk/aboutthebbc/"><abbr title="British Broadcasting Corporation">BBC</abbr></a>, <a
@@ -297,24 +302,32 @@ import Section from "../components/Section.astro";
         </p>
       </Experience>
 
-      <Experience id="lighthouse" title="Software Engineer at Lighthouse" period={{ start: "2004-06", end: "2008-01" }}>
-        <p>
-          <a href="http://lighthouseuk.net">Lighthouse</a> are a small marketing and technology services agency. I worked
-          on accounts for <a href="http://www.assaabloy.co.uk">ASSA Abloy</a> and
-          <a href="https://new.siemens.com/global/en/products/energy.html">Siemens Energy Services</a>.
-        </p>
+      <Experience
+        id="lighthouse"
+        company="Lighthouse"
+        roles={[
+          {
+            position: "Software Engineer",
+            period: { start: "2004-06", end: "2008-01" },
+          },
+        ]}
+        <p
+      >
+        <a href="http://lighthouseuk.net">Lighthouse</a> are a small marketing and technology services agency. I worked on
+        accounts for <a href="http://www.assaabloy.co.uk">ASSA Abloy</a> and
+        <a href="https://new.siemens.com/global/en/products/energy.html">Siemens Energy Services</a>.
       </Experience>
     </Section>
-
-    <Section id="qualifications" title="Qualifications">
-      <ul>
-        <li>
-          BSc (Hons), Internet Computing with Industrial Experience [1:1],
-          <a href="http://www.hull.ac.uk">The&nbsp;University&nbsp;of&nbsp;Hull</a>
-        </li>
-      </ul>
-    </Section>
   </div>
+
+  <Section id="qualifications" title="Qualifications">
+    <ul>
+      <li>
+        BSc (Hons), Internet Computing with Industrial Experience [1:1],
+        <a href="http://www.hull.ac.uk">The&nbsp;University&nbsp;of&nbsp;Hull</a>
+      </li>
+    </ul>
+  </Section>
 </Layout>
 
 <style is:global lang="scss">
