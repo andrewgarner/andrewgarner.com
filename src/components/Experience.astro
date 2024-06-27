@@ -22,8 +22,8 @@ const { id, company, roles } = Astro.props;
     roles &&
       roles.map(({ position, period }) => (
         <>
-          <strong>{position}</strong>,
-          <span class="period">
+          <span class="font-medium">{position}</span>,
+          <span class="text-sm">
             <Time isoString={period.start} />
             to
             {period.end ? <Time isoString={period.end} /> : "Present"}
@@ -35,11 +35,3 @@ const { id, company, roles } = Astro.props;
 </p>
 
 <slot />
-
-<style is:global lang="scss">
-  @use "../styles/variables" as *;
-
-  .period {
-    font-size: $small-font-size;
-  }
-</style>

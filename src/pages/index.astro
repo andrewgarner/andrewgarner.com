@@ -7,337 +7,340 @@ import Skill from "../components/Skill.astro";
 ---
 
 <Layout title="Andrew Garner">
-  <div class="home">
+  <nav>
     <p>
       <a href="mailto:andrew@andrewgarner.com">andrew@andrewgarner.com</a><br />
       <a href="https://github.com/andrewgarner">github.com/andrewgarner</a>
     </p>
+  </nav>
 
-    <Section id="summary" title="Summary">
+  <Section id="summary" title="Summary">
+    <p>
+      I am a product&#8209;minded technical leader with broad experience delivering resilient systems. I practise
+      domain&#8209;driven design and extreme programming. I am comfortable with ambiguity, owning challenging problems,
+      and managing trade&#8209;offs.
+    </p>
+    <p>
+      I embrace continuous learning, sharing knowledge, and mentoring others. I seek harmony and enable teams to perform
+      at their best by fostering collaboration and removing obstacles.
+    </p>
+    <p>Above all, I value curiosity, empathy, and simplicity.</p>
+  </Section>
+
+  <Section id="skills" title="Skills">
+    <Skill id="industry-knowledge" title="Industry Knowledge">
+      <ul class="sm:columns-2">
+        <li class="m-0">Distributed systems</li>
+        <li class="m-0">Domain-driven design</li>
+        <li class="m-0">Evolutionary architectures</li>
+        <li class="m-0">Serverless architectures</li>
+        <li class="m-0">Systems thinking</li>
+        <li class="m-0">Test&#8209;driven development</li>
+        <li class="m-0">Wardley mapping</li>
+      </ul>
+    </Skill>
+
+    <Skill id="tools-and-technologies" title="Tools & Technologies">
+      <ul class="sm:columns-2">
+        <li class="m-0"><a href="https://aws.amazon.com/">Amazon Web Services</a></li>
+        <li class="m-0"><a href="https://www.datadoghq.com/">Datadog</a></li>
+        <li class="m-0"><a href="https://www.docker.com/">Docker</a></li>
+        <li class="m-0"><a href="https://cloud.google.com/">Google Cloud</a></li>
+        <li class="m-0"><a href="https://kubernetes.io/">Kubernetes</a></li>
+        <li class="m-0"><a href="https://react.dev/">React</a></li>
+        <li class="m-0"><a href="https://www.ruby-lang.org/">Ruby</a></li>
+        <li class="m-0"><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+      </ul>
+    </Skill>
+  </Section>
+
+  <Section id="projects" title="Projects">
+    <Project id="cazoo-marketplace" title="Cazoo Marketplace" period={{ start: "2024-03", end: "2024-05" }}>
       <p>
-        I am a product&#8209;minded technical leader with broad experience delivering resilient systems. I practise
-        domain&#8209;driven design and extreme programming. I am comfortable with ambiguity, owning challenging
-        problems, and managing trade&#8209;offs.
+        I played a leading role in helping <a href="https://www.cazoo.co.uk/">Cazoo</a> transition to a pure&#8209;play automotive
+        marketplace business model. This included:
+      </p>
+      <ul>
+        <li>
+          Contributing to a series of experiments to learn how consumers might sell their car to a dealer through a
+          Cazoo auction platform.
+        </li>
+        <li>
+          Delivering incremental improvements across the funnel, focusing on key metrics such as valuation rate, offer
+          rate, and acceptance rate.
+        </li>
+      </ul>
+    </Project>
+
+    <Project id="cazoo-operations" title="Cazoo Operations" period={{ start: "2020-09", end: "2024-02" }}>
+      <p>
+        I contributed significantly to the rapid scaling of operations at <a href="https://www.cazoo.co.uk/">Cazoo</a>,
+        building processes and technology from the ground up across multiple domains. Key achievements include:
+      </p>
+      <ul>
+        <li>
+          Created a solution to enable middle&#8209;mile logistics planning and execution to be brought in&#8209;house,
+          ultimately scaling to support close to 160K used car sales.
+        </li>
+        <li>
+          Reduced the launch time for Cazoo Customer Centres from 3&nbsp;weeks to 1&nbsp;hour, enabling rapid scaling
+          from 1&nbsp;to&nbsp;9&nbsp;locations in less than 1&nbsp;month. This expansion increased vehicle handover
+          capacity, ultimately leading to an 8%&nbsp;increase in the overall conversion rate.
+        </li>
+        <li>
+          Lead technical discovery in collaboration with AI specialists from <a href="https://www.satalia.com/"
+            >Satalia</a
+          > to enhance the scalability and efficiency of middle&#8209;mile planning. This resulted in the formation of a
+          new team that developed a custom optimisation model solving a novel vehicle routing problem.
+        </li>
+      </ul>
+    </Project>
+
+    <Project id="hsbc-kinetic" title="HSBC Kinetic" period={{ start: "2019-01", end: "2020-01" }}>
+      <p>
+        As a Solutions Architect, I delivered a transformational onboarding capability for HSBC’s new mobile&#8209;first
+        business banking service, <a href="https://www.hsbckinetic.co.uk">Kinetic</a>, built on Google&nbsp;Cloud.
+        Kinetic enables small businesses to open an account in minutes via the app, compared to weeks with
+        in&#8209;person branch visits previously. My responsibilities included:
+      </p>
+      <ul>
+        <li>
+          Working with and aligning multiple C&#8209;level business stakeholders and collaborating with a globally
+          distributed team.
+        </li>
+        <li>
+          Designing systems to capture anti&#8209;money laundering (AML) and ‘know&nbsp;your&nbsp;customer’ (KYC) due
+          diligence information.
+        </li>
+        <li>
+          Modelling onboarding processes using
+          <a href="https://www.uml.org"><abbr class="no-underline" title="Unified Modeling Language">UML</abbr></a> and
+          <a href="http://www.bpmn.org"
+            ><abbr class="no-underline" title="Business Process Model and Notation">BPMN</abbr></a
+          >.
+        </li>
+        <li>
+          Designing RESTful APIs using <a href="https://raml.org"
+            ><abbr class="no-underline" title="RESTful API Modeling Language">RAML</abbr></a
+          >.
+        </li>
+        <li>
+          Designing a microservice orchestration capability using <a href="https://www.activiti.org">Activiti’s</a> open&#8209;source
+          <abbr class="no-underline" title="Business Process Management">BPM</abbr> framework.
+        </li>
+        <li>
+          Integrating with HSBC core banking systems, <a href="https://www.forgerock.com">ForgeRock</a>
+          <a href="https://www.forgerock.com/platform/identity-management">OpenIDM</a> and
+          <a href="https://www.forgerock.com/platform/access-management">OpenAM</a>
+          identity and access management services, and <a href="https://onfido.com">Onfido</a> for document identification
+          and facial biometric verification services.
+        </li>
+      </ul>
+    </Project>
+
+    <Project id="gov-uk" title="GOV.UK" period={{ start: "2016-06", end: "2019-01" }}>
+      <p>
+        As a Senior Software Engineer, I contributed to several key projects for the <a
+          href="https://www.gov.uk/government/organisations/government-digital-service"
+          >Government&nbsp;Digital&nbsp;Service</a
+        >, including:
+      </p>
+      <ul>
+        <li>
+          Migrated the core publishing platform to a new
+          <a href="https://content-api.publishing.service.gov.uk/">Content&nbsp;API</a>.
+        </li>
+        <li>
+          Developed tools to support government publishers, enabling them to audit and measure the performance of
+          published content.
+        </li>
+        <li>Enhanced navigational patterns and validated a topic taxonomy, improving content discoverability.</li>
+        <li>Created a faceted search product specifically for Brexit&#8209;related content.</li>
+        <li>
+          Redesigned <a href="https://data.gov.uk">data.gov.uk</a>, an open data platform.
+        </li>
+      </ul>
+    </Project>
+
+    <Project
+      id="pension-wise"
+      title="Pension Wise"
+      period={{ start: "2014-09", end: "2016-04" }}
+      github="guidance-guarantee-programme"
+    >
+      <p>
+        As a Senior Software Engineer, I assisted <a href="https://www.gov.uk/government/organisations/hm-treasury"
+          ><abbr class="no-underline" title="Her Majesty’s">HM</abbr>&nbsp;Treasury</a
+        > in launching a new service offering guidance on pension options. My contributions included:
+      </p>
+      <ul>
+        <li>
+          Playing a key role in the <a
+            href="https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works">discovery</a
+          >, <a href="https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works">alpha</a>, <a
+            href="https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works">beta</a
+          >, and <a href="https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works">live</a> phases of the
+          service.
+        </li>
+        <li>Building prototypes and testing assumptions in a user research lab.</li>
+        <li>
+          Creating web applications with <a href="https://rubyonrails.org">Ruby&nbsp;on&nbsp;Rails</a>, <a
+            href="https://cucumber.io/tools/cucumber-open/">Cucumber</a
+          >, and <a href="https://rspec.info">RSpec</a>.
+        </li>
+        <li>Setting up deployment pipelines, configuring monitoring systems, and operational dashboards.</li>
+        <li>
+          Integrating with <a href="https://www.twilio.com">Twilio</a> and <a href="https://www.zendesk.com">Zendesk</a
+          >.
+        </li>
+      </ul>
+    </Project>
+
+    <Project
+      id="money-advice-service"
+      title="Money Advice Service"
+      period={{ start: "2013-12", end: "2014-08" }}
+      github="moneyadviceservice/frontend"
+    >
+      <p>
+        I was the technical lead in a new team in a company&#8209;wide agile transformation developing a responsive and
+        accessible website. This included:
+      </p>
+      <ul>
+        <li>Adopting a hexagonal architecture in <a href="https://rubyonrails.org">Ruby&nbsp;on&nbsp;Rails</a>.</li>
+        <li>Creating a design system.</li>
+      </ul>
+    </Project>
+
+    <Project id="white-label-dating" title="White Label Dating">
+      <p>
+        I worked on a number of projects to support the rapid growth of the White&nbsp;Label&nbsp;Dating platform. This
+        included:
+      </p>
+
+      <ul>
+        <li>
+          Mobile platform: A new web application and service layer consisting of a
+          <a href="https://rubyonrails.org">Ruby&nbsp;on&nbsp;Rails</a> responsive frontend,
+          <a href="https://www.ruby-lang.org">Ruby</a>
+          <abbr class="no-underline" title="representational state transfer">REST</abbr> APIs, and a Node.js router and authentication
+          service. Continuous deployments to
+          <a href="http://www.rackspace.co.uk/cloud">Rackspace Cloud</a> infrastructure described and orchestrated with
+          <a href="https://puppet.com">Puppet</a>.
+        </li>
+        <li>
+          Event&#8209;streaming platform: <a href="https://www.rabbitmq.com">RabbitMQ</a> and
+          <a href="https://www.ruby-lang.org">Ruby</a> microservices supporting a number of use cases such as application
+          push notifications, <abbr class="no-underline" title="content delivery network">CDN</abbr> purging and detecting
+          dating scammers.
+        </li>
+        <li>
+          Transactional email platform: A new pipeline for rendering and sending personalised member emails using
+          <a href="https://www.rabbitmq.com">RabbitMQ</a> and <a href="https://www.ruby-lang.org">Ruby</a>
+          microservices. Peak volumes were in excess of 20M emails per day.
+        </li>
+      </ul>
+    </Project>
+  </Section>
+
+  <Section id="experience" title="Experience">
+    <Experience
+      id="cazoo"
+      company="Cazoo"
+      roles={[
+        { position: "Staff Software Engineer", period: { start: "2023-01", end: "2024-05" } },
+        { position: "Senior Software Engineer", period: { start: "2021-06", end: "2022-12" } },
+        { position: "Software Engineer", period: { start: "2020-09", end: "2021-05" } },
+      ]}
+    >
+      <p>
+        <a href="https://www.cazoo.co.uk">Cazoo</a> was founded in December&nbsp;2018 with a mission to transform the car
+        buying experience across the UK and Europe by offering better selection, quality, transparency, convenience, flexibility,
+        and peace of mind.
       </p>
       <p>
-        I embrace continuous learning, sharing knowledge, and mentoring others. I seek harmony and enable teams to
-        perform at their best by fostering collaboration and removing obstacles.
+        They launched in December&nbsp;2019, became a unicorn in October&nbsp;2020, and listed on the <abbr
+          class="no-underline"
+          title="New York Stock Exchange">NYSE</abbr
+        > in August&nbsp;2021. Cazoo developed a market&#8209;leading brand and an end&#8209;to&#8209;end supply chain, including
+        vehicle reconditioning and both middle&#8209;mile and last&#8209;mile logistics. Despite their success, Cazoo entered
+        administration in May&nbsp;2024 due to financial challenges.
       </p>
-      <p>Above all, I value curiosity, empathy, and simplicity.</p>
-    </Section>
+    </Experience>
 
-    <Section id="skills" title="Skills">
-      <Skill id="industry-knowledge" title="Industry Knowledge">
-        <ul class="skills">
-          <li>Distributed systems</li>
-          <li>Domain-driven design</li>
-          <li>Evolutionary architectures</li>
-          <li>Serverless architectures</li>
-          <li>Systems thinking</li>
-          <li>Test&#8209;driven development</li>
-          <li>Wardley mapping</li>
-        </ul>
-      </Skill>
+    <Experience
+      id="surefire"
+      company="SureFire"
+      roles={[{ position: "Founder and Principal Consultant", period: { start: "2012-10" } }]}
+    >
+      <p>
+        <a href="https://www.surefirething.co.uk">SureFire</a> helps make digital products and services. I have worked with
+        clients including <a href="https://www.gov.uk/government/organisations/government-digital-service"
+          ><abbr class="no-underline" title="Government Digital Service">GDS</abbr></a
+        >, <a href="https://www.gov.uk/government/organisations/hm-treasury"
+          ><abbr class="no-underline" title="Her Majesty’s">HM</abbr>&nbsp;Treasury</a
+        >, <a href="https://www.hsbc.co.uk">HSBC</a>, and the <a href="https://www.moneyadviceservice.org.uk"
+          >Money&nbsp;Advice&nbsp;Service</a
+        >.
+      </p>
+    </Experience>
 
-      <Skill id="tools-and-technologies" title="Tools & Technologies">
-        <ul class="skills">
-          <li><a href="https://aws.amazon.com/">Amazon Web Services</a></li>
-          <li><a href="https://www.datadoghq.com/">Datadog</a></li>
-          <li><a href="https://www.docker.com/">Docker</a></li>
-          <li><a href="https://cloud.google.com/">Google Cloud</a></li>
-          <li><a href="https://kubernetes.io/">Kubernetes</a></li>
-          <li><a href="https://react.dev/">React</a></li>
-          <li><a href="https://www.ruby-lang.org/">Ruby</a></li>
-          <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-        </ul>
-      </Skill>
-    </Section>
+    <Experience
+      id="venntro"
+      company="Senior Software Engineer at Venntro"
+      roles={[
+        {
+          position: "Senior Software Engineer",
+          period: { start: "2009-12", end: "2012-09" },
+        },
+      ]}
+    >
+      <p>
+        <a href="http://www.venntro.com">Venntro</a> is a <a href="http://www.fast50.co.uk">Deloitte Fast 50</a> technology
+        business. I worked on their award&#8209;winning service, <a href="http://www.whitelabeldating.com"
+          >White&nbsp;Label&nbsp;Dating</a
+        >, that provides online dating technology for brands and entrepreneurs.
+      </p>
+    </Experience>
 
-    <Section id="projects" title="Projects">
-      <Project id="cazoo-marketplace" title="Cazoo Marketplace" period={{ start: "2024-03", end: "2024-05" }}>
-        <p>
-          I played a leading role in helping <a href="https://www.cazoo.co.uk/">Cazoo</a> transition to a pure&#8209;play
-          automotive marketplace business model. This included:
-        </p>
-        <ul>
-          <li>
-            Contributing to a series of experiments to learn how consumers might sell their car to a dealer through a
-            Cazoo auction platform.
-          </li>
-          <li>
-            Delivering incremental improvements across the funnel, focusing on key metrics such as valuation rate, offer
-            rate, and acceptance rate.
-          </li>
-        </ul>
-      </Project>
+    <Experience
+      id="idea"
+      company="iDEA"
+      roles={[
+        {
+          position: "Software Engineer",
+          period: { start: "2008-02", end: "2009-11" },
+        },
+      ]}
+    >
+      <p>
+        <a href="https://idea.eu">iDEA</a> are workplace design specialists. I created web apps for clients including the
+        <a href="http://www.bbc.co.uk/aboutthebbc/"
+          ><abbr class="no-underline" title="British Broadcasting Corporation">BBC</abbr></a
+        >, <a href="http://www.gensler.com">Gensler</a>, <a href="http://www8.hp.com/us/en/hp-information"
+          ><abbr class="no-underline" title="Hewlett‑Packard">HP</abbr></a
+        >, <a href="http://www.johnsoncontrols.com/about-us/our-company">Johnson Controls</a>, <a
+          href="https://www.microsoft.com/en-gb/about/">Microsoft</a
+        >, and <a href="https://www.unilever.co.uk/about/">Unilever</a>.
+      </p>
+    </Experience>
 
-      <Project id="cazoo-operations" title="Cazoo Operations" period={{ start: "2020-09", end: "2024-02" }}>
-        <p>
-          I contributed significantly to the rapid scaling of operations at <a href="https://www.cazoo.co.uk/">Cazoo</a
-          >, building processes and technology from the ground up across multiple domains. Key achievements include:
-        </p>
-        <ul>
-          <li>
-            Created a solution to enable middle&#8209;mile logistics planning and execution to be brought
-            in&#8209;house, ultimately scaling to support close to 160K used car sales.
-          </li>
-          <li>
-            Reduced the launch time for Cazoo Customer Centres from 3&nbsp;weeks to 1&nbsp;hour, enabling rapid scaling
-            from 1&nbsp;to&nbsp;9&nbsp;locations in less than 1&nbsp;month. This expansion increased vehicle handover
-            capacity, ultimately leading to an 8%&nbsp;increase in the overall conversion rate.
-          </li>
-          <li>
-            Lead technical discovery in collaboration with AI specialists from <a href="https://www.satalia.com/"
-              >Satalia</a
-            > to enhance the scalability and efficiency of middle&#8209;mile planning. This resulted in the formation of
-            a new team that developed a custom optimisation model solving a novel vehicle routing problem.
-          </li>
-        </ul>
-      </Project>
-
-      <Project id="hsbc-kinetic" title="HSBC Kinetic" period={{ start: "2019-01", end: "2020-01" }}>
-        <p>
-          As a Solutions Architect, I delivered a transformational onboarding capability for HSBC’s new
-          mobile&#8209;first business banking service, <a href="https://www.hsbckinetic.co.uk">Kinetic</a>, built on
-          Google&nbsp;Cloud. Kinetic enables small businesses to open an account in minutes via the app, compared to
-          weeks with in&#8209;person branch visits previously. My responsibilities included:
-        </p>
-        <ul>
-          <li>
-            Working with and aligning multiple C&#8209;level business stakeholders and collaborating with a globally
-            distributed team.
-          </li>
-          <li>
-            Designing systems to capture anti&#8209;money laundering (AML) and ‘know&nbsp;your&nbsp;customer’ (KYC) due
-            diligence information.
-          </li>
-          <li>
-            Modelling onboarding processes using
-            <a href="https://www.uml.org"><abbr title="Unified Modeling Language">UML</abbr></a> and
-            <a href="http://www.bpmn.org"><abbr title="Business Process Model and Notation">BPMN</abbr></a>.
-          </li>
-          <li>
-            Designing RESTful APIs using <a href="https://raml.org"
-              ><abbr title="RESTful API Modeling Language">RAML</abbr></a
-            >.
-          </li>
-          <li>
-            Designing a microservice orchestration capability using <a href="https://www.activiti.org">Activiti’s</a> open&#8209;source
-            <abbr title="Business Process Management">BPM</abbr> framework.
-          </li>
-          <li>
-            Integrating with HSBC core banking systems, <a href="https://www.forgerock.com">ForgeRock</a>
-            <a href="https://www.forgerock.com/platform/identity-management">OpenIDM</a> and
-            <a href="https://www.forgerock.com/platform/access-management">OpenAM</a>
-            identity and access management services, and <a href="https://onfido.com">Onfido</a> for document identification
-            and facial biometric verification services.
-          </li>
-        </ul>
-      </Project>
-
-      <Project id="gov-uk" title="GOV.UK" period={{ start: "2016-06", end: "2019-01" }}>
-        <p>
-          As a Senior Software Engineer, I contributed to several key projects for the <a
-            href="https://www.gov.uk/government/organisations/government-digital-service"
-            >Government&nbsp;Digital&nbsp;Service</a
-          >, including:
-        </p>
-        <ul>
-          <li>
-            Migrated the core publishing platform to a new
-            <a href="https://content-api.publishing.service.gov.uk/">Content&nbsp;API.</a>
-          </li>
-          <li>
-            Developed tools to support government publishers, enabling them to audit and measure the performance of
-            published content.
-          </li>
-          <li>Enhanced navigational patterns and validated a topic taxonomy, improving content discoverability.</li>
-          <li>Created a faceted search product specifically for Brexit-related content.</li>
-          <li>
-            Redesigned <a href="https://data.gov.uk">data.gov.uk</a>, an open data platform.
-          </li>
-        </ul>
-      </Project>
-
-      <Project
-        id="pension-wise"
-        title="Pension Wise"
-        period={{ start: "2014-09", end: "2016-04" }}
-        github="guidance-guarantee-programme"
-      >
-        <p>
-          As a Senior Software Engineer, I assisted <a href="https://www.gov.uk/government/organisations/hm-treasury"
-            ><abbr title="Her Majesty’s">HM</abbr>&nbsp;Treasury</a
-          > in launching a new service offering guidance on pension options. My contributions included:
-        </p>
-        <ul>
-          <li>
-            Playing a key role in the <a
-              href="https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works">discovery</a
-            >, <a href="https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works">alpha</a>, <a
-              href="https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works">beta</a
-            >, and <a href="https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works">live</a> phases of
-            the service.
-          </li>
-          <li>Building prototypes and testing assumptions in a user research lab.</li>
-          <li>
-            Creating web applications with <a href="https://rubyonrails.org">Ruby&nbsp;on&nbsp;Rails</a>, <a
-              href="https://cucumber.io/tools/cucumber-open/">Cucumber</a
-            >, and <a href="https://rspec.info">RSpec</a>.
-          </li>
-          <li>Setting up deployment pipelines, configuring monitoring systems, and operational dashboards.</li>
-          <li>
-            Integrating with <a href="https://www.twilio.com">Twilio</a> and <a href="https://www.zendesk.com"
-              >Zendesk</a
-            >.
-          </li>
-        </ul>
-      </Project>
-
-      <Project
-        id="money-advice-service"
-        title="Money Advice Service"
-        period={{ start: "2013-12", end: "2014-08" }}
-        github="moneyadviceservice/frontend"
-      >
-        <p>
-          I was the technical lead in a new team in a company&#8209;wide agile transformation developing a responsive
-          and accessible website. This included:
-        </p>
-        <ul>
-          <li>Adopting a hexagonal architecture in <a href="https://rubyonrails.org">Ruby&nbsp;on&nbsp;Rails</a>.</li>
-          <li>Creating a design system.</li>
-        </ul>
-      </Project>
-
-      <Project id="white-label-dating" title="White Label Dating">
-        <p>
-          I worked on a number of projects to support the rapid growth of the White&nbsp;Label&nbsp;Dating platform.
-          This included:
-        </p>
-
-        <ul>
-          <li>
-            Mobile platform: A new web application and service layer consisting of a
-            <a href="https://rubyonrails.org">Ruby&nbsp;on&nbsp;Rails</a> responsive frontend,
-            <a href="https://www.ruby-lang.org">Ruby</a>
-            <abbr title="representational state transfer">REST</abbr> APIs, and a Node.js router and authentication service.
-            Continuous deployments to
-            <a href="http://www.rackspace.co.uk/cloud">Rackspace Cloud</a> infrastructure described and orchestrated with
-            <a href="https://puppet.com">Puppet</a>.
-          </li>
-          <li>
-            Event&#8209;streaming platform: <a href="https://www.rabbitmq.com">RabbitMQ</a> and
-            <a href="https://www.ruby-lang.org">Ruby</a> microservices supporting a number of use cases such as application
-            push notifications, <abbr title="content delivery network">CDN</abbr> purging and detecting dating scammers.
-          </li>
-          <li>
-            Transactional email platform: A new pipeline for rendering and sending personalised member emails using
-            <a href="https://www.rabbitmq.com">RabbitMQ</a> and <a href="https://www.ruby-lang.org">Ruby</a>
-            microservices. Peak volumes were in excess of 20M emails per day.
-          </li>
-        </ul>
-      </Project>
-    </Section>
-
-    <Section id="experience" title="Experience">
-      <Experience
-        id="cazoo"
-        company="Cazoo"
-        roles={[
-          { position: "Staff Software Engineer", period: { start: "2023-01", end: "2024-05" } },
-          { position: "Senior Software Engineer", period: { start: "2021-06", end: "2022-12" } },
-          { position: "Software Engineer", period: { start: "2020-09", end: "2021-05" } },
-        ]}
-      >
-        <p>
-          <a href="https://www.cazoo.co.uk">Cazoo</a> was founded in December&nbsp;2018 with a mission to transform the car
-          buying experience across the UK and Europe by offering better selection, quality, transparency, convenience, flexibility,
-          and peace of mind.
-        </p>
-        <p>
-          They launched in December&nbsp;2019, became a unicorn in October&nbsp;2020, and listed on the <abbr
-            title="New York Stock Exchange">NYSE</abbr
-          > in August&nbsp;2021. Cazoo developed a market&#8209;leading brand and an end&#8209;to&#8209;end supply chain,
-          including vehicle reconditioning and both middle&#8209;mile and last&#8209;mile logistics. Despite their success,
-          Cazoo entered administration in May&nbsp;2024 due to financial challenges.
-        </p>
-      </Experience>
-
-      <Experience
-        id="surefire"
-        company="SureFire"
-        roles={[{ position: "Founder and Principal Consultant", period: { start: "2012-10" } }]}
-      >
-        <p>
-          <a href="https://www.surefirething.co.uk">SureFire</a> helps make digital products and services. I have worked
-          with clients including <a href="https://www.gov.uk/government/organisations/government-digital-service"
-            ><abbr title="Government Digital Service">GDS</abbr></a
-          >, <a href="https://www.gov.uk/government/organisations/hm-treasury"
-            ><abbr title="Her Majesty’s">HM</abbr>&nbsp;Treasury</a
-          >, <a href="https://www.hsbc.co.uk">HSBC</a>, and the <a href="https://www.moneyadviceservice.org.uk"
-            >Money&nbsp;Advice&nbsp;Service</a
-          >.
-        </p>
-      </Experience>
-
-      <Experience
-        id="venntro"
-        company="Senior Software Engineer at Venntro"
-        roles={[
-          {
-            position: "Senior Software Engineer",
-            period: { start: "2009-12", end: "2012-09" },
-          },
-        ]}
-      >
-        <p>
-          <a href="http://www.venntro.com">Venntro</a> is a <a href="http://www.fast50.co.uk">Deloitte Fast 50</a> technology
-          business. I worked on their award&#8209;winning service, <a href="http://www.whitelabeldating.com"
-            >White&nbsp;Label&nbsp;Dating</a
-          >, that provides online dating technology for brands and entrepreneurs.
-        </p>
-      </Experience>
-
-      <Experience
-        id="idea"
-        company="iDEA"
-        roles={[
-          {
-            position: "Software Engineer",
-            period: { start: "2008-02", end: "2009-11" },
-          },
-        ]}
-      >
-        <p>
-          <a href="https://idea.eu">iDEA</a> are workplace design specialists. I created web apps for clients including the
-          <a href="http://www.bbc.co.uk/aboutthebbc/"><abbr title="British Broadcasting Corporation">BBC</abbr></a>, <a
-            href="http://www.gensler.com">Gensler</a
-          >, <a href="http://www8.hp.com/us/en/hp-information"><abbr title="Hewlett‑Packard">HP</abbr></a>, <a
-            href="http://www.johnsoncontrols.com/about-us/our-company">Johnson Controls</a
-          >, <a href="https://www.microsoft.com/en-gb/about/">Microsoft</a>, and <a
-            href="https://www.unilever.co.uk/about/">Unilever</a
-          >.
-        </p>
-      </Experience>
-
-      <Experience
-        id="lighthouse"
-        company="Lighthouse"
-        roles={[
-          {
-            position: "Software Engineer",
-            period: { start: "2004-06", end: "2008-01" },
-          },
-        ]}
-        <p
-      >
-        <a href="http://lighthouseuk.net">Lighthouse</a> are a small marketing and technology services agency. I worked on
-        accounts for <a href="http://www.assaabloy.co.uk">ASSA Abloy</a> and
-        <a href="https://new.siemens.com/global/en/products/energy.html">Siemens Energy Services</a>.
-      </Experience>
-    </Section>
-  </div>
+    <Experience
+      id="lighthouse"
+      company="Lighthouse"
+      roles={[
+        {
+          position: "Software Engineer",
+          period: { start: "2004-06", end: "2008-01" },
+        },
+      ]}
+      <p
+    >
+      <a href="http://lighthouseuk.net">Lighthouse</a> are a small marketing and technology services agency. I worked on
+      accounts for <a href="http://www.assaabloy.co.uk">ASSA Abloy</a> and
+      <a href="https://new.siemens.com/global/en/products/energy.html">Siemens Energy Services</a>.
+    </Experience>
+  </Section>
 
   <Section id="qualifications" title="Qualifications">
     <ul>
@@ -348,15 +351,3 @@ import Skill from "../components/Skill.astro";
     </ul>
   </Section>
 </Layout>
-
-<style is:global lang="scss">
-  @use "../styles/mixins" as *;
-  @use "../styles/variables" as *;
-
-  .skills {
-    @include media-query($on-laptop) {
-      column-count: 2;
-      column-gap: calc($spacing-unit * 2);
-    }
-  }
-</style>

@@ -7,6 +7,8 @@ interface Props {
 const { id, title } = Astro.props;
 ---
 
-<h2 id={id}>{title}</h2>
+<section>
+  <h2 id={id}>{title}</h2>
 
-<slot />
+  <slot />
+</section>
