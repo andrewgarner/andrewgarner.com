@@ -23,7 +23,7 @@ const { id, company, roles } = Astro.props;
       roles.map(({ position, period }) => (
         <>
           <span class="font-medium">{position}</span>,
-          <span class="text-sm">
+          <span class="text-nowrap text-sm">
             <Time isoString={period.start} />
             to
             {period.end ? <Time isoString={period.end} /> : "Present"}

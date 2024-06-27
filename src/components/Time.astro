@@ -1,5 +1,6 @@
 ---
 import { DateTime } from "luxon";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 interface Props {
   isoString: string;
@@ -9,4 +10,32 @@ const { isoString }: Props = Astro.props;
 const value = DateTime.fromISO(isoString);
 ---
 
-<time datetime={value.toFormat("yyyy-dd")}>{value.toFormat("LLLL yyyy")}</time>
+<time
+  datetime={value.toFormat("yyyy-dd")}
+  data-md={defaultTheme.screens.md}
+  data-text-base={value.toFormat("MMM yyyy")}
+  data-text-md={value.toFormat("LLLL yyyy")}>{value.toFormat("LLLL yyyy")}</time
+>
+
+<script>
+  function formatDates() {
+    const times = document.querySelectorAll("time");
+
+    times.forEach((time) => {
+      const baseText = time.dataset.textBase;
+      const mediumText = time.dataset.textMd;
+      const mediumBreakpoint = time.dataset.md;
+
+      const isMediumScreen = window.matchMedia(`(min-width: ${mediumBreakpoint})`).matches;
+
+      if (isMediumScreen && mediumText && time.textContent === baseText) {
+        time.textContent = mediumText;
+      } else if (!isMediumScreen && baseText && time.textContent === mediumText) {
+        time.textContent = baseText;
+      }
+    });
+  }
+
+  formatDates();
+  window.addEventListener("resize", formatDates);
+</script>
