@@ -7,20 +7,20 @@
     "start": "astro dev"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "@fontsource-variable/sometype-mono": "^5.0.3",
-    "@tailwindcss/typography": "^0.5.13",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.2",
+    "@fontsource-variable/sometype-mono": "^5.1.0",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/luxon": "^3.4.2",
-    "astro": "^4.11.1",
-    "luxon": "^3.4.4",
-    "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-packagejson": "^2.5.0",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "sass": "^1.77.2",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.4.5"
+    "astro": "^4.16.10",
+    "luxon": "^3.5.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-packagejson": "^2.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "sass": "^1.80.6",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   },
   "packageManager": "pnpm@9.12.3+sha256.24235772cc4ac82a62627cd47f834c72667a2ce87799a846ec4e8e555e2d4b8b"
 }
