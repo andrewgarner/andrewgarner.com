@@ -1,5 +1,5 @@
 ---
-import "@fontsource-variable/sometype-mono";
+import sometypeMonoWoff2 from "@fontsource-variable/sometype-mono/files/sometype-mono-latin-wght-normal.woff2";
 
 interface Props {
   title: string;
@@ -9,6 +9,17 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
+<style is:global>
+  @font-face {
+    font-family: "Sometype Mono Variable";
+    font-style: normal;
+    font-display: fallback;
+    font-weight: 400 700;
+    src: url(@fontsource-variable/sometype-mono/files/sometype-mono-latin-wght-normal.woff2) format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+</style>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,10 +29,11 @@ const { title } = Astro.props;
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>{title}</title>
     <link rel="canonical" href="https://www.andrewgarner.com/" />
+    <link rel="preload" href={sometypeMonoWoff2} as="font" type="font/woff2" crossorigin />
   </head>
   <body class="bg-stone-50 px-8 pt-16 sm:pt-32 dark:bg-stone-800">
     <div
-      class="prose prose-stone prose-headings:font-normal prose-a:underline-offset-2 prose-a:decoration-stone-400 hover:prose-a:decoration-stone-900 prose-li:marker:text-stone-400 prose-a:font-normal dark:prose-invert dark:hover:prose-a:decoration-current dark:prose-a:text-stone-300 dark:prose-a:decoration-stone-400 mx-auto text-pretty font-mono tracking-tight subpixel-antialiased [font-kerning:normal]"
+      class="prose prose-stone mx-auto text-pretty font-mono tracking-tight subpixel-antialiased [font-kerning:normal] dark:prose-invert prose-headings:font-normal prose-a:font-normal prose-a:decoration-stone-400 prose-a:underline-offset-2 hover:prose-a:decoration-stone-900 prose-li:marker:text-stone-400 dark:prose-a:text-stone-300 dark:prose-a:decoration-stone-400 dark:hover:prose-a:decoration-current"
     >
       <header>
         <h1>Andrew Garner</h1>
