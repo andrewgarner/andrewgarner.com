@@ -4,7 +4,7 @@
   };
 
   outputs = { self, nixpkgs }:
-    let 
+    let
       allSystems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -20,7 +20,7 @@
       devShells = forAllSystems ({ pkgs }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            nodejs-slim
+            nodejs-slim_22
           ];
         };
       });
