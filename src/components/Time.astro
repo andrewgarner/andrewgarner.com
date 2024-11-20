@@ -11,10 +11,10 @@ const value = DateTime.fromISO(isoString);
 ---
 
 <time
-  datetime={value.toFormat("yyyy-dd")}
   data-md={defaultTheme.screens.md}
   data-text-base={value.toFormat("MMM yyyy")}
-  data-text-md={value.toFormat("LLLL yyyy")}>{value.toFormat("LLLL yyyy")}</time
+  data-text-md={value.toFormat("LLLL yyyy")}
+  datetime={value.toFormat("yyyy-dd")}>{value.toFormat("LLLL yyyy")}</time
 >
 
 <script>

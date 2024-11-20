@@ -20,6 +20,19 @@ jobs:
       - name: Check Astro project for errors
         run: pnpm astro check
 
+  eslint-check:
+    name: ESLint check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Check Astro project for errors
+        run: pnpm eslint
+
   prettier-check:
     name: Prettier check
     runs-on: ubuntu-latest
