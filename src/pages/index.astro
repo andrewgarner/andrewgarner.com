@@ -28,29 +28,55 @@ import Skill from "../components/Skill.astro";
   </Section>
 
   <Section id="skills" title="Skills">
-    <Skill id="industry-knowledge" title="Industry Knowledge">
-      <ul class="sm:columns-2">
-        <li class="m-0">Distributed systems</li>
-        <li class="m-0">Domain-driven design</li>
-        <li class="m-0">Evolutionary architectures</li>
-        <li class="m-0">Serverless architectures</li>
-        <li class="m-0">Systems thinking</li>
-        <li class="m-0">Test&#8209;driven development</li>
-      </ul>
-    </Skill>
-
-    <Skill id="tools-and-technologies" title="Tools & Technologies">
-      <ul class="sm:columns-2">
-        <li class="m-0"><a href="https://aws.amazon.com/">Amazon Web Services</a></li>
-        <li class="m-0"><a href="https://www.datadoghq.com/">Datadog</a></li>
-        <li class="m-0"><a href="https://www.docker.com/">Docker</a></li>
-        <li class="m-0"><a href="https://cloud.google.com/">Google Cloud</a></li>
-        <li class="m-0"><a href="https://kubernetes.io/">Kubernetes</a></li>
-        <li class="m-0"><a href="https://react.dev/">React</a></li>
-        <li class="m-0"><a href="https://www.ruby-lang.org/">Ruby</a></li>
-        <li class="m-0"><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-      </ul>
-    </Skill>
+    <div class="sm:grid sm:grid-cols-2">
+      <div>
+        <Skill class="sm:mt-0" id="industry-knowledge" title="Industry Knowledge">
+          <ul>
+            <li class="m-0">Distributed systems</li>
+            <li class="m-0">Domain-driven design</li>
+            <li class="m-0">Evolutionary architectures</li>
+            <li class="m-0">Serverless architectures</li>
+            <li class="m-0">Systems thinking</li>
+            <li class="m-0">Test&#8209;driven development</li>
+          </ul>
+        </Skill>
+        <Skill id="platforms-and-tools" title="Platforms & Tools">
+          <ul>
+            <li class="m-0"><a href="https://aws.amazon.com/">Amazon Web Services</a></li>
+            <li class="m-0"><a href="https://www.datadoghq.com/">Datadog</a></li>
+            <li class="m-0"><a href="https://www.cloudflare.com/">Cloudflare</a></li>
+            <li class="m-0"><a href="https://github.com/actions/">GitHub Actions</a></li>
+            <li class="m-0"><a href="https://cloud.google.com/">Google Cloud</a></li>
+            <li class="m-0"><a href="https://kubernetes.io/">Kubernetes</a></li>
+            <li class="m-0"><a href="https://www.terraform.io/">Terraform</a></li>
+          </ul>
+        </Skill>
+      </div>
+      <div>
+        <Skill class="sm:mt-0" id="databases" title="Databases">
+          <ul>
+            <li class="m-0"><a href="https://aws.amazon.com/">DynamoDB</a></li>
+            <li class="m-0"><a href="https://www.datadoghq.com/">PostgreSQL</a></li>
+          </ul>
+        </Skill>
+        <Skill id="programming-languages" title="Programming Languages">
+          <ul>
+            <li class="m-0"><a href="https://www.java.com/">Java</a></li>
+            <li class="m-0"><a href="https://www.ruby-lang.org/">Ruby</a></li>
+            <li class="m-0"><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+          </ul>
+        </Skill>
+        <Skill id="runtimes-and-frameworks" title="Runtimes & Frameworks">
+          <ul>
+            <li class="m-0"><a href="https://nextjs.org/">Next.js</a></li>
+            <li class="m-0"><a href="https://nodejs.org/">Node.js</a></li>
+            <li class="m-0"><a href="https://react.dev/">React</a></li>
+            <li class="m-0"><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+            <li class="m-0"><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
+          </ul>
+        </Skill>
+      </div>
+    </div>
   </Section>
 
   <Section id="projects" title="Projects">
