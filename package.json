@@ -2,9 +2,9 @@
   "name": "andrewgarner.com",
   "scripts": {
     "build": "astro check && astro build",
-    "dev": "astro dev",
-    "preview": "astro preview",
-    "start": "astro dev"
+    "dev": "astro dev --bun",
+    "preview": "astro preview --bun",
+    "start": "astro dev --bun"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
