@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "andrewgarner",
+  "pages_build_output_dir": "dist",
+  "vars": {
+    "BUN_VERSION": "1.3.10",
+  },
+}

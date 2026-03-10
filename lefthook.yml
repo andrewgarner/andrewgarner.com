@@ -4,8 +4,8 @@ pre-commit:
   commands:
     eslint:
       glob: "*.{js,cjs,mjs,ts,astro}"
-      run: pnpm eslint --fix {staged_files}
+      run: bun eslint --fix {staged_files}
       stage_fixed: true
     prettier:
-      run: pnpm prettier --write --ignore-unknown {staged_files}
+      run: bun prettier --write --ignore-unknown {staged_files}
       stage_fixed: true

@@ -4,17 +4,17 @@ Astro static site for andrewgarner.com — personal portfolio and resume.
 
 ## Setup
 
-Package manager is **pnpm** (requires Node.js 22).
+Package manager is **Bun** 1.3.10.
 
 ## Verify before committing
 
 ```sh
-pnpm astro check
-pnpm eslint
-pnpm prettier --check --ignore-unknown .
+bun astro check
+bun eslint
+bun prettier --check --ignore-unknown .
 ```
 
-Auto-fix lint and formatting: `pnpm eslint --fix . && pnpm prettier --write --ignore-unknown .`
+Auto-fix lint and formatting: `bun eslint --fix . && bun prettier --write --ignore-unknown .`
 
 ## Conventions
 
