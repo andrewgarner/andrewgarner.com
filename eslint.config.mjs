@@ -11,4 +11,7 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginAstro.configs.all,
+  // False positive: Astro <script> without is:inline is bundled by Vite into
+  // an external module, so it is never actually inline in the HTML output.
+  { rules: { "astro/no-unsafe-inline-scripts": "off" } },
 ];
