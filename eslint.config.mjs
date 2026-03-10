@@ -11,4 +11,10 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginAstro.configs.all,
+  {
+    rules: {
+      // Astro bundles non-inline <script> tags and hashes them for CSP automatically
+      "astro/no-unsafe-inline-scripts": "off",
+    },
+  },
 ];
