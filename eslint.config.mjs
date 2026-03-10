@@ -5,6 +5,7 @@ import tseslint from "typescript-eslint";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  { ignores: [".astro/"] },
   { files: ["**/*.{js,mjs,cjs,ts,astro}"] },
   { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
