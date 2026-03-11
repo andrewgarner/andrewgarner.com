@@ -1,6 +1,7 @@
-import globals from "globals";
 import pluginJs from "@eslint/js";
 import pluginAstro from "eslint-plugin-astro";
+import perfectionist from "eslint-plugin-perfectionist";
+import globals from "globals";
 import tseslint from "typescript-eslint";
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -11,4 +12,5 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginAstro.configs.recommended,
+  perfectionist.configs["recommended-natural"],
 ];

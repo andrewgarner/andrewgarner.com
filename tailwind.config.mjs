@@ -3,11 +3,11 @@ import typography from "@tailwindcss/typography";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  plugins: [typography],
   theme: {
     extend: {},
     fontFamily: {
       mono: ["var(--font-sometype-mono)"],
     },
   },
-  plugins: [typography],
 };

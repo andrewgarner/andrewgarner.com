@@ -1,21 +1,15 @@
-import { defineConfig, fontProviders } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
   build: {
     assets: "assets",
   },
   fonts: [
     {
-      name: "Sometype Mono",
-      provider: fontProviders.fontsource(),
       cssVariable: "--font-sometype-mono",
-      weights: [400, 700],
-      styles: ["normal"],
       display: "fallback",
-      featureSettings: "'kern' 1",
       fallbacks: [
         "Anonymous Pro",
         "Consolas",
@@ -32,6 +26,10 @@ export default defineConfig({
         "Courier",
         "monospace",
       ],
+      featureSettings: "'kern' 1",
+      name: "Sometype Mono",
+      provider: fontProviders.fontsource(),
+      styles: ["normal"],
       unicodeRange: [
         "U+0000-00FF",
         "U+0131",
@@ -54,7 +52,9 @@ export default defineConfig({
         "U+FEFF",
         "U+FFFD",
       ],
+      weights: [400, 700],
     },
   ],
+  integrations: [tailwind()],
   security: { csp: true },
 });

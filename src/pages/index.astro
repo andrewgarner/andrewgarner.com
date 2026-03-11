@@ -1,8 +1,8 @@
 ---
 import Experience from "../components/Experience.astro";
-import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import Skill from "../components/Skill.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Andrew Garner">
@@ -60,9 +60,9 @@ import Skill from "../components/Skill.astro";
       company="Cazoo"
       id="cazoo"
       roles={[
-        { position: "Staff Software Engineer", period: { start: "2023-01", end: "2024-05" } },
-        { position: "Senior Software Engineer", period: { start: "2021-06", end: "2022-12" } },
-        { position: "Software Engineer", period: { start: "2020-09", end: "2021-05" } },
+        { period: { end: "2024-05", start: "2023-01" }, position: "Staff Software Engineer" },
+        { period: { end: "2022-12", start: "2021-06" }, position: "Senior Software Engineer" },
+        { period: { end: "2021-05", start: "2020-09" }, position: "Software Engineer" },
       ]}
     >
       <p>
@@ -126,7 +126,7 @@ import Skill from "../components/Skill.astro";
     <Experience
       company="HSBC"
       id="hsbc"
-      roles={[{ position: "Consulting Solutions Architect", period: { start: "2019-01", end: "2020-01" } }]}
+      roles={[{ period: { end: "2020-01", start: "2019-01" }, position: "Consulting Solutions Architect" }]}
     >
       <p>
         Designed and delivered a transformational onboarding capability for HSBC’s mobile&#8209;first business banking
@@ -168,8 +168,8 @@ import Skill from "../components/Skill.astro";
       id="gds"
       roles={[
         {
+          period: { end: "2019-01", start: "2016-07" },
           position: "Consulting Software Engineer",
-          period: { start: "2016-07", end: "2019-01" },
         },
       ]}
     >
@@ -204,8 +204,8 @@ import Skill from "../components/Skill.astro";
       id="hm-treasury"
       roles={[
         {
+          period: { end: "2016-04", start: "2014-09" },
           position: "Consulting Software Engineer",
-          period: { start: "2014-09", end: "2016-04" },
         },
       ]}
     >
@@ -236,8 +236,8 @@ import Skill from "../components/Skill.astro";
       id="the-money-advice-service"
       roles={[
         {
+          period: { end: "2014-08", start: "2013-12" },
           position: "Consulting Software Engineer",
-          period: { start: "2013-12", end: "2014-08" },
         },
       ]}
     >
@@ -260,12 +260,12 @@ import Skill from "../components/Skill.astro";
       id="venntro"
       roles={[
         {
+          period: { end: "2012-09", start: "2011-05" },
           position: "Senior Software Engineer",
-          period: { start: "2011-05", end: "2012-09" },
         },
         {
+          period: { end: "2011-03", start: "2009-12" },
           position: "Software Engineer",
-          period: { start: "2009-12", end: "2011-03" },
         },
       ]}
     >
@@ -287,8 +287,8 @@ import Skill from "../components/Skill.astro";
         id="idea"
         roles={[
           {
+            period: { end: "2009-11", start: "2008-02" },
             position: "Software Engineer",
-            period: { start: "2008-02", end: "2009-11" },
           },
         ]}
       >
@@ -319,8 +319,8 @@ import Skill from "../components/Skill.astro";
         id="lighthouse"
         roles={[
           {
+            period: { end: "2008-01", start: "2004-06" },
             position: "Software Engineer",
-            period: { start: "2004-06", end: "2008-01" },
           },
         ]}
       >

@@ -2,25 +2,25 @@
 import Time from "./Time.astro";
 
 interface Props {
-  id: string;
   company: string;
+  id: string;
   roles: Array<{
-    position: string;
     period: {
-      start: string;
       end?: string;
+      start: string;
     };
+    position: string;
   }>;
 }
 
-const { id, company, roles } = Astro.props;
+const { company, id, roles } = Astro.props;
 ---
 
 <h3 id={id}>{company}</h3>
 <p>
   {
     roles &&
-      roles.map(({ position, period }) => (
+      roles.map(({ period, position }) => (
         <>
           <span class="font-medium">{position}</span>,
           <span class="text-nowrap text-sm">
