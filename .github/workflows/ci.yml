@@ -18,7 +18,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Check Astro project for errors
-        run: pnpm astro check
+        run: bun run --bun astro check
 
   eslint-check:
     name: ESLint check
@@ -31,7 +31,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Check Astro project for errors
-        run: pnpm eslint
+        run: bun run eslint
 
   prettier-check:
     name: Prettier check
@@ -44,4 +44,4 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Check formatting
-        run: pnpm prettier --check --ignore-unknown .
+        run: bun run prettier --check --ignore-unknown .

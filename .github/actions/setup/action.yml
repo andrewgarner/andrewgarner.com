@@ -1,5 +1,5 @@
 name: Set up
-description: Set up the Node.js environment and install the project with a clean slate
+description: Set up the Bun environment and install the project with a clean slate
 
 branding:
   color: gray-dark
@@ -8,13 +8,7 @@ branding:
 runs:
   using: composite
   steps:
-    - run: corepack enable
-      shell: bash
+    - uses: oven-sh/setup-bun@v2
 
-    - uses: actions/setup-node@v4
-      with:
-        cache: pnpm
-        node-version-file: package.json
-
-    - run: pnpm install
+    - run: bun install --frozen-lockfile
       shell: bash
